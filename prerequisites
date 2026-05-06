@@ -1,0 +1,66 @@
+Setting up your environment on Ubuntu for a Python exam usually involves three main parts: installing the editor, managing your libraries, and understanding which tools are already available.
+
+Here is the step-by-step guide to getting everything ready.
+
+---
+
+## 1. Install VS Code
+The most reliable way to install Visual Studio Code on Ubuntu is via the official **Snap** package, as it handles updates automatically.
+
+*   **Command:**
+    ```bash
+    sudo snap install --classic code
+    ```
+*   **Essential Setup:** Once installed, open VS Code, go to the **Extensions** view (Ctrl+Shift+X), and search for **"Python"** (by Microsoft). Install it to enable IntelliSense, debugging, and linting.
+
+---
+
+## 2. The `re` (Regular Expression) Module
+There is a small misunderstanding here: **The `re` module does not need to be installed.** It is part of the Python **Standard Library**, meaning it comes pre-installed with every Python installation.
+
+*   **How to use it:** Just add this line to the top of your script:
+    ```python
+    import re
+    ```
+*   **Verification:** To confirm it’s there, type `python3 -c "import re; print('re is ready')"` in your terminal.
+
+---
+
+## 3. Install NumPy (and other external packages)
+Unlike `re`, **NumPy** is a third-party library. You should install it using `pip` (the Python package manager).
+
+*   **Step A: Install Pip (if you don't have it)**
+    ```bash
+    sudo apt update
+    sudo apt install python3-pip
+    ```
+*   **Step B: Install NumPy**
+    ```bash
+    pip install numpy
+    ```
+*   **Alternative (System-wide):** If you prefer using the Ubuntu repository:
+    ```bash
+    sudo apt install python3-numpy
+    ```
+
+---
+
+## 4. Summary Checklist for Exams
+When preparing for a Python exam, it is helpful to distinguish between what is "Built-in" and what is "External."
+
+| Tool / Module | Category | Installation Command |
+| :--- | :--- | :--- |
+| **VS Code** | IDE (Editor) | `sudo snap install --classic code` |
+| **re** | Standard Library | *None (Pre-installed)* |
+| **math / json** | Standard Library | *None (Pre-installed)* |
+| **NumPy** | External Library | `pip install numpy` |
+| **Pandas** | External Library | `pip install pandas` |
+| **Matplotlib** | External Library | `pip install matplotlib` |
+
+### Quick Tip for VS Code
+If VS Code says "ModuleNotFoundError" even after you installed NumPy, press **Ctrl+Shift+P**, type **"Python: Select Interpreter"**, and ensure you have selected the version of Python where you installed the library (usually the one marked "Global" or your specific Virtual Environment).
+
+[How to install NumPy on Ubuntu](https://www.youtube.com/watch?v=TFNFGzab8ZE)
+This video provides a direct, visual walkthrough of installing NumPy on Ubuntu using the terminal, which is the most common method you'll use for exam prep.
+```
+http://googleusercontent.com/youtube_content/1
